@@ -30,7 +30,10 @@ export default function RootLayout({
           backgroundSize="cover"
         >
           <TopBar />
-          <ShowFolder />
+          {
+            true ? <ShowFolder /> : null
+          }
+
           {children}
         </Box>
       </ChakraProvider>

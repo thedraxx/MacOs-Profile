@@ -1,114 +1,104 @@
-import { Box, Button, Stack } from '@chakra-ui/react';
+import { Box, Button, Stack, } from '@chakra-ui/react';
 import React from 'react'
+import Draggable from 'react-draggable';
 
 const ShowFolder = () => {
     return (
-        <Box
-            bg="rgb(0, 19, 47)"
-            color="white"
-            zIndex="100"
-            display="flex"
-            justifyContent="center"
-            position={"absolute"}
-            marginTop={100}
-            marginLeft={100}
-            width={"40%"}
-            height={"40%"}
-        >
-
-
+        <Draggable>
             <Box
-                display="flex"
-                position={"absolute"}
-                flexDirection={"row"}
-                top={0}
-                left={0}
+                bg="rgb(0, 19, 47)"
+                color="white"
                 zIndex="100"
+                display="flex"
                 justifyContent="center"
-                alignItems="center"
-
+                position={"absolute"}
+                marginTop={100}
+                marginLeft={100}
+                width={"40%"}
+                height={"40%"}
             >
-                <Stack
-                    direction="row"
-                    spacing={1}
-                    align="center"
-                    justify="center"
-                    marginTop={1}
-                    marginLeft={1}
+
+                <Box
+                    display="flex"
+                    position={"absolute"}
+                    flexDirection={"row"}
+                    top={0}
+                    left={0}
+                    zIndex="100"
+                    justifyContent="center"
+                    alignItems="center"
+
                 >
-
-                    <p
-                        className="chackraText card "
-                        style={{
-                            color: "white",
-                            fontSize: "1.5rem",
-                            fontWeight: "bold",
-                            marginTop: "0.5rem",
-                            marginLeft: "0.5rem",
-                            marginRight: "0.5rem",
-                            backgroundColor: "rgb(245, 6, 6)",
-                            borderRadius: "50%",
-                            width: "1rem",
-                            height: "1rem",
-                        }}
-
+                    <Stack
+                        direction="row"
+                        spacing={1}
+                        align="center"
+                        justify="center"
+                        marginTop={1}
+                        marginLeft={1}
                     >
-                        {""}
-                    </p>
 
+                        <p
+                            onClick={() => { console.log("click") }}
+                            className="chackraText card "
+                            style={{
+                                color: "white",
+                                fontSize: "1.5rem",
+                                fontWeight: "bold",
+                                marginTop: "0.5rem",
+                                marginLeft: "0.5rem",
+                                marginRight: "0.5rem",
+                                backgroundColor: "rgb(245, 6, 6)",
+                                borderRadius: "50%",
+                                width: "1rem",
+                                height: "1rem",
+                            }}
 
+                        >
 
-                    <p
-                        className="chackraText card "
-                        style={{
-                            color: "white",
-                            fontSize: "1.5rem",
-                            fontWeight: "bold",
-                            marginTop: "0.5rem",
-                            marginLeft: "0.5rem",
-                            marginRight: "0.5rem",
-                            backgroundColor: "rgb(152, 127, 0)",
-                            borderRadius: "50%",
-                            width: "1rem",
-                            height: "1rem",
-                        }}
+                        </p>
 
-                    >
-                        {""}
-                    </p>
+                        <p
+                            className="chackraText card "
+                            style={{
+                                color: "white",
+                                fontSize: "1.5rem",
+                                fontWeight: "bold",
+                                marginTop: "0.5rem",
+                                marginLeft: "0.5rem",
+                                marginRight: "0.5rem",
+                                backgroundColor: "rgb(152, 127, 0)",
+                                borderRadius: "50%",
+                                width: "1rem",
+                                height: "1rem",
+                            }}
 
+                        >
 
+                        </p>
 
+                        <p
+                            className="chackraText card "
+                            style={{
+                                color: "white",
+                                fontSize: "1.5rem",
+                                fontWeight: "bold",
+                                marginTop: "0.5rem",
+                                marginLeft: "0.5rem",
+                                marginRight: "0.5rem",
+                                backgroundColor: "rgb(0, 103, 72)",
+                                borderRadius: "50%",
+                                width: "1rem",
+                                height: "1rem",
+                            }}
 
-                    <p
-                        className="chackraText card "
-                        style={{
-                            color: "white",
-                            fontSize: "1.5rem",
-                            fontWeight: "bold",
-                            marginTop: "0.5rem",
-                            marginLeft: "0.5rem",
-                            marginRight: "0.5rem",
-                            backgroundColor: "rgb(0, 103, 72)",
-                            borderRadius: "50%",
-                            width: "1rem",
-                            height: "1rem",
-                        }}
-
-                    >
-                        {""}
-                    </p>
-
-
-
-                </Stack>
-
-
-
+                        >
+                        </p>
+                    </Stack>
+                </Box>
             </Box>
+        </Draggable>
 
-
-        </Box>
     )
 }
 
