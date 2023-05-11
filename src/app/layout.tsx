@@ -5,6 +5,7 @@ import './globals.css'
 import { ChakraProvider, Box } from '@chakra-ui/react';
 import ShowFolder from '@/components/ShowFolder/ShowFolder';
 import { GlobalThemeChakra } from '../theme/Theme';
+import { ShowFolderProvider } from '@/components/context';
 
 
 export const metadata = {
@@ -19,24 +20,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ChakraProvider
-        theme={GlobalThemeChakra}
-      >
-
-        <Box
-          bg="gray.200"
-          h="100vh"
-          backgroundImage="/monterey.jpg"
-          backgroundSize="cover"
+      <ShowFolderProvider>
+        <ChakraProvider
+          theme={GlobalThemeChakra}
         >
-          <TopBar />
-          {
-            true ? <ShowFolder /> : null
-          }
 
-          {children}
-        </Box>
-      </ChakraProvider>
+          <Box
+            bg="gray.200"
+            h="100vh"
+            backgroundImage="/monterey.jpg"
+            backgroundSize="cover"
+          >
+            <TopBar />
+
+            {children}
+          </Box>
+        </ChakraProvider>
+      </ShowFolderProvider>
     </html>
   )
 }

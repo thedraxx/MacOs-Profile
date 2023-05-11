@@ -1,8 +1,12 @@
 import { Box, Button, Stack, } from '@chakra-ui/react';
-import React from 'react'
+import React, { useContext } from 'react'
 import Draggable from 'react-draggable';
+import { ShowFolderContext } from '../context';
 
 const ShowFolder = () => {
+
+    const { toggleShowFolder } = useContext(ShowFolderContext);
+
     return (
         <Draggable>
             <Box
@@ -12,10 +16,16 @@ const ShowFolder = () => {
                 display="flex"
                 justifyContent="center"
                 position={"absolute"}
-                marginTop={100}
-                marginLeft={100}
+                marginTop={300}
+                marginLeft={50}
                 width={"40%"}
                 height={"40%"}
+                transition="all ease-in-out"
+                borderRadius="10px"
+                boxShadow="0px 0px 10px 0px rgba(0,0,0,0.75)"
+                transform={
+                    "translate(0px, 0px)"
+                }
             >
 
                 <Box
@@ -39,8 +49,9 @@ const ShowFolder = () => {
                     >
 
                         <p
-                            onClick={() => { console.log("click") }}
+                            onClick={() => { toggleShowFolder() }}
                             className="chackraText card "
+
                             style={{
                                 color: "white",
                                 fontSize: "1.5rem",
@@ -52,6 +63,9 @@ const ShowFolder = () => {
                                 borderRadius: "50%",
                                 width: "1rem",
                                 height: "1rem",
+                                textDecoration: "none",
+                                cursor: "pointer"
+
                             }}
 
                         >

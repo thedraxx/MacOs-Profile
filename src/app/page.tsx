@@ -1,11 +1,14 @@
 'use client'
-import React from 'react';
-import { ChakraProvider, Box, Text, Button } from '@chakra-ui/react';
+import React, { useContext } from 'react';
+import { Box, Text, Button } from '@chakra-ui/react';
 import Image from 'next/image';
-import TopBar from '@/components/TopBar/TopBar';
+import { ShowFolderContext } from '@/components/context';
 import ShowFolder from '@/components/ShowFolder/ShowFolder';
 
 export default function Home() {
+
+  const { toggleShowFolder, isOpen } = useContext(ShowFolderContext);
+
   return (
     <Box
       w="100%"
@@ -20,6 +23,11 @@ export default function Home() {
       display="flex"
       flex={"row"}
     >
+      {
+        isOpen && (
+          <ShowFolder />
+        )
+      }
 
 
 
@@ -45,7 +53,7 @@ export default function Home() {
             borderRadius: "10px"
           }}
           onClick={(e) => {
-            window.open("https://www.linkedin.com/in/eduardo-oliveira-4b1b3b1b4/", "_blank")
+            toggleShowFolder();
           }}
         >
           <Image
@@ -190,7 +198,7 @@ export default function Home() {
             borderRadius: "10px"
           }}
           onClick={(e) => {
-            window.open("https://www.linkedin.com/in/eduardo-oliveira-4b1b3b1b4/", "_blank")
+            toggleShowFolder();
           }}
         >
           <Image
