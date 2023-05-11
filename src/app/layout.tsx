@@ -3,6 +3,9 @@
 import TopBar from '@/components/TopBar/TopBar'
 import './globals.css'
 import { ChakraProvider, Box } from '@chakra-ui/react';
+import ShowFolder from '@/components/ShowFolder/ShowFolder';
+import { GlobalThemeChakra } from '../theme/Theme';
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ChakraProvider>
+      <ChakraProvider
+        theme={GlobalThemeChakra}
+      >
+
         <Box
           bg="gray.200"
           h="100vh"
@@ -24,6 +30,7 @@ export default function RootLayout({
           backgroundSize="cover"
         >
           <TopBar />
+          <ShowFolder />
           {children}
         </Box>
       </ChakraProvider>
