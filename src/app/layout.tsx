@@ -1,7 +1,8 @@
+// app/providers.tsx
+'use client'
+import TopBar from '@/components/TopBar/TopBar'
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { ChakraProvider, Box } from '@chakra-ui/react';
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +16,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <ChakraProvider>
+        <Box
+          bg="gray.200"
+          h="100vh"
+          backgroundImage="/monterey.jpg"
+          backgroundSize="cover"
+        >
+          <TopBar />
+          {children}
+        </Box>
+      </ChakraProvider>
     </html>
   )
 }

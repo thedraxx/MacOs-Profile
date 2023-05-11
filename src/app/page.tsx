@@ -1,95 +1,106 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+'use client'
+import React from 'react';
+import { ChakraProvider, Box, Text } from '@chakra-ui/react';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <Box
+      w="100%"
+      height={"auto"}
+      p={5}
+      color="white"
+      justifyContent={"row"}
+      alignItems={"center"}
+      top="0"
+      left="0"
+      zIndex="100"
+      display="flex"
+      flex={"row"}
+    >
 
-      <div className={styles.center}>
+
+      <Box
+        marginLeft={5}
+        marginRight={5}
+        justifyContent={"center"}
+        alignItems={"center"}
+        height={"auto"}
+        width={"auto"}
+      >
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/firefox.png"
+          alt="Picture of the author"
+          width={55}
+          height={55}
         />
-      </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Text
+          marginTop={2}
+          justifyContent={"center"}
+          alignItems={"center"}
+          fontSize={12}
+          textAlign={"center"}
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          Check CV
+        </Text>
+      </Box>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
+      <Box
+        marginLeft={5}
+        marginRight={5}
+        justifyContent={"center"}
+        alignItems={"center"}
+        height={"auto"}
+        width={"auto"}
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+      >
+        <Image
+          src="/twitter.png"
+          alt="Picture of the author"
+          width={55}
+          height={55}
+        />
+
+        <Text
+          marginTop={2}
+          justifyContent={"center"}
+          alignItems={"center"}
+          fontSize={12}
+          textAlign={"center"}
         >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          Twitter
+        </Text>
+      </Box>
+
+
+      <Box
+        marginLeft={5}
+        marginRight={5}
+        justifyContent={"center"}
+        alignItems={"center"}
+        height={"auto"}
+        width={"auto"}
+
+      >
+        <Image
+          src="/icontxt.png"
+          alt="Picture of the author"
+          width={55}
+          height={55}
+        />
+
+        <Text
+          marginTop={2}
+          justifyContent={"center"}
+          alignItems={"center"}
+          fontSize={12}
+          textAlign={"center"}
+        >
+          About this
+        </Text>
+      </Box>
+    </Box>
   )
 }
