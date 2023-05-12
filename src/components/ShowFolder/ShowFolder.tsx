@@ -1,16 +1,16 @@
-import { Box, Button, Stack, } from '@chakra-ui/react';
+import { Box, Button, Stack, Text, } from '@chakra-ui/react';
 import React, { useContext } from 'react'
 import Draggable from 'react-draggable';
 import { ShowFolderContext } from '../context';
 
 const ShowFolder = () => {
 
-    const { toggleShowFolder } = useContext(ShowFolderContext);
+    const { infoFolder, toggleShowFolder } = useContext(ShowFolderContext);
 
     return (
         <Draggable>
             <Box
-                bg="rgb(0, 19, 47)"
+                bg="#2D3748"
                 color="white"
                 zIndex="100"
                 display="flex"
@@ -18,11 +18,23 @@ const ShowFolder = () => {
                 position={"absolute"}
                 marginTop={300}
                 marginLeft={50}
-                width={"40%"}
-                height={"40%"}
+                width={{
+                    base: "90%",
+                    sm: "80%",
+                    md: "70%",
+                    lg: "60%",
+                    xl: "50%",
+                }}
+                height={{
+                    base: "60%",
+                    sm: "50%",
+                    md: "50%",
+                    lg: "50%",
+                    xl: "50%",
+                }}
                 transition="all ease-in-out"
                 borderRadius="10px"
-                boxShadow="0px 0px 10px 0px rgba(0,0,0,0.75)"
+                boxShadow="0px 0px 10px 0px rgba(0, 0, 0, 0.75)"
                 transform={
                     "translate(0px, 0px)"
                 }
@@ -35,9 +47,10 @@ const ShowFolder = () => {
                     top={0}
                     left={0}
                     zIndex="100"
-                    justifyContent="center"
+                    justifyContent={"space-between"}
                     alignItems="center"
-
+                    width={"100%"}
+                    height={"auto"}
                 >
                     <Stack
                         direction="row"
@@ -49,9 +62,8 @@ const ShowFolder = () => {
                     >
 
                         <p
-                            onClick={() => { toggleShowFolder() }}
+                            onClick={() => { toggleShowFolder("", "") }}
                             className="chackraText card "
-
                             style={{
                                 color: "white",
                                 fontSize: "1.5rem",
@@ -67,9 +79,7 @@ const ShowFolder = () => {
                                 cursor: "pointer"
 
                             }}
-
                         >
-
                         </p>
 
                         <p
@@ -86,11 +96,8 @@ const ShowFolder = () => {
                                 width: "1rem",
                                 height: "1rem",
                             }}
-
                         >
-
                         </p>
-
                         <p
                             className="chackraText card "
                             style={{
@@ -109,6 +116,53 @@ const ShowFolder = () => {
                         >
                         </p>
                     </Stack>
+
+                    <Box
+                        display="flex"
+                        flexDirection={"row"}
+                        justifyContent="center"
+                        alignItems="center"
+                        marginTop={1}
+                    >
+                        <Text
+                            className="chackraText card "
+                            style={{
+                                color: "white",
+
+                                fontWeight: "bold",
+                                marginTop: "0.5rem",
+                                marginLeft: "0.5rem",
+                                marginRight: "0.5rem",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                textAlign: "center",
+                            }}
+
+                        >
+                            {
+                                infoFolder.title
+                            }
+                        </Text>
+                    </Box>
+                    <Box
+                        display="flex"
+                        flexDirection={"row"}
+                        justifyContent="center"
+                        alignItems="center"
+                    />
+                </Box>
+                <Box
+                    display="flex"
+                    flexDirection={"row"}
+                    justifyContent="center"
+                    alignItems="center"
+                    marginTop={1}
+                    w={"85%"}
+
+                >
+                    {
+                        infoFolder.description
+                    }
                 </Box>
             </Box>
         </Draggable>

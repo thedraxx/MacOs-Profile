@@ -1,6 +1,6 @@
 'use client'
 import React, { useContext } from 'react';
-import { Box, Text, Button } from '@chakra-ui/react';
+import { Box, Text, Button, Grid, GridItem } from '@chakra-ui/react';
 import Image from 'next/image';
 import { ShowFolderContext } from '@/components/context';
 import ShowFolder from '@/components/ShowFolder/ShowFolder';
@@ -29,197 +29,181 @@ export default function Home() {
         )
       }
 
-
-
-      <Box
-        marginLeft={2}
-        marginRight={2}
-        justifyContent={"center"}
-        alignItems={"center"}
-        height={"auto"}
-        width={"auto"}
+      <Grid
+        templateColumns={{
+          base: "repeat(3, 1fr)",
+          sm: "repeat(4, 1fr)",
+          md: "repeat(4, 1fr)",
+          lg: "repeat(4, 1fr)",
+          xl: "repeat(4, 1fr)",
+        }}
+        gap={4}
+        marginTop={5}
+        marginBottom={5}
       >
-        <Button
-          bg="rgba(255, 255, 255, 0)"
-          padding={10}
-          color="white"
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          flexDirection={"column"}
-          _hover={{
-            background: "rgba(255, 255, 255, 0.699)",
-            color: "black",
-            borderRadius: "10px"
-          }}
-          onClick={(e) => {
-            toggleShowFolder();
-          }}
+        <GridItem
+          rowSpan={2}
+          colSpan={1}
         >
-          <Image
-            src="/firefox.png"
-            alt="Picture of the author"
-            width={55}
-            height={55}
-          />
-
-          <Text
-            marginTop={2}
+          <Button
+            bg="rgba(255, 255, 255, 0)"
+            padding={10}
+            color="white"
+            display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
-            fontSize={12}
-            textAlign={"center"}
+            flexDirection={"column"}
+            _hover={{
+              background: "rgba(255, 255, 255, 0.699)",
+              color: "black",
+              borderRadius: "10px"
+            }}
+            onClick={(e) => {
+              console.log("firefox")
+            }}
           >
-            Check CV
-          </Text>
+            <Image
+              src="/firefox.png"
+              alt="Picture of the author"
+              width={55}
+              height={55}
+            />
 
-        </Button>
+            <Text
+              marginTop={2}
+              justifyContent={"center"}
+              alignItems={"center"}
+              fontSize={12}
+              textAlign={"center"}
+            >
+              Check CV
+            </Text>
+          </Button>
+        </GridItem>
 
-      </Box>
 
-
-      <Box
-        marginLeft={2}
-        marginRight={2}
-        justifyContent={"center"}
-        alignItems={"center"}
-        height={"auto"}
-        width={"auto"}
-
-      >
-        <Button
-          bg="rgba(255, 255, 255, 0)"
-          padding={10}
-          color="white"
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          flexDirection={"column"}
-          _hover={{
-            background: "rgba(255, 255, 255, 0.699)",
-            color: "black",
-            borderRadius: "10px"
-          }}
-          onClick={(e) => {
-            window.open("https://www.linkedin.com/in/eduardo-oliveira-4b1b3b1b4/", "_blank")
-          }}
+        <GridItem
+          rowSpan={2}
+          colSpan={1}
         >
-          <Image
-            src="/twitter.png"
-            alt="Picture of the author"
-            width={55}
-            height={55}
-          />
-
-          <Text
-            marginTop={2}
+          <Button
+            bg="rgba(255, 255, 255, 0)"
+            padding={10}
+            color="white"
+            display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
-            fontSize={12}
-            textAlign={"center"}
+            flexDirection={"column"}
+            _hover={{
+              background: "rgba(255, 255, 255, 0.699)",
+              color: "black",
+              borderRadius: "10px"
+            }}
+            onClick={(e) => {
+              window.open("https://www.linkedin.com/in/eduardo-oliveira-4b1b3b1b4/", "_blank")
+            }}
           >
-            Twitter
-          </Text>
+            <Image
+              src="/twitter.png"
+              alt="Picture of the author"
+              width={55}
+              height={55}
+            />
 
-        </Button>
+            <Text
+              marginTop={2}
+              justifyContent={"center"}
+              alignItems={"center"}
+              fontSize={12}
+              textAlign={"center"}
+            >
+              Twitter
+            </Text>
+          </Button>
+        </GridItem>
 
-      </Box>
 
-
-      <Box
-        marginLeft={2}
-        marginRight={2}
-        justifyContent={"center"}
-        alignItems={"center"}
-        height={"auto"}
-        width={"auto"}
-
-      >
-        <Button
-          bg="rgba(255, 255, 255, 0)"
-          padding={10}
-          color="white"
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          flexDirection={"column"}
-          _hover={{
-            background: "rgba(255, 255, 255, 0.699)",
-            color: "black",
-            borderRadius: "10px"
-          }}
-          onClick={(e) => {
-            window.open("https://www.linkedin.com/in/eduardo-oliveira-4b1b3b1b4/", "_blank")
-          }}
+        <GridItem
+          rowSpan={2}
+          colSpan={1}
         >
-          <Image
-            src="/icontxt.png"
-            alt="Picture of the author"
-            width={55}
-            height={55}
-          />
-
-          <Text
-            marginTop={2}
+          <Button
+            bg="rgba(255, 255, 255, 0)"
+            padding={10}
+            color="white"
+            display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
-            fontSize={12}
-            textAlign={"center"}
+            flexDirection={"column"}
+            _hover={{
+              background: "rgba(255, 255, 255, 0.699)",
+              color: "black",
+              borderRadius: "10px"
+            }}
+            onClick={(e) => {
+              toggleShowFolder("TextEdit", "This is a WIP to share all the links I need, this was made in NextJS, ChakraUI and Typescript.");
+            }}
           >
-            About this
-          </Text>
-        </Button>
+            <Image
+              src="/icontxt.png"
+              alt="Picture of the author"
+              width={55}
+              height={55}
+            />
 
-      </Box>
+            <Text
+              marginTop={2}
+              justifyContent={"center"}
+              alignItems={"center"}
+              fontSize={12}
+              textAlign={"center"}
+            >
+              About this
+            </Text>
+          </Button>
+        </GridItem>
 
-
-
-      {/*  */}
-      <Box
-        marginLeft={2}
-        marginRight={2}
-        justifyContent={"center"}
-        alignItems={"center"}
-        height={"auto"}
-        width={"auto"}
-
-      >
-        <Button
-          bg="rgba(255, 255, 255, 0)"
-          padding={10}
-          color="white"
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-          flexDirection={"column"}
-          _hover={{
-            background: "rgba(255, 255, 255, 0.699)",
-            color: "black",
-            borderRadius: "10px"
-          }}
-          onClick={(e) => {
-            toggleShowFolder();
-          }}
+        {/*  */}
+        <GridItem
+          rowSpan={2}
+          colSpan={1}
         >
-          <Image
-            src="/mac-folder.png"
-            alt="Picture of the author"
-            width={55}
-            height={55}
-          />
-
-          <Text
-            marginTop={2}
+          <Button
+            bg="rgba(255, 255, 255, 0)"
+            padding={10}
+            color="white"
+            display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
-            fontSize={12}
-            textAlign={"center"}
+            flexDirection={"column"}
+            _hover={{
+              background: "rgba(255, 255, 255, 0.699)",
+              color: "black",
+              borderRadius: "10px"
+            }}
+            onClick={(e) => {
+              console.log("open folder");
+            }}
           >
-            Proyects
-          </Text>
-        </Button>
+            <Image
+              src="/mac-folder.png"
+              alt="Picture of the author"
+              width={55}
+              height={55}
+            />
 
-      </Box>
+            <Text
+              marginTop={2}
+              justifyContent={"center"}
+              alignItems={"center"}
+              fontSize={12}
+              textAlign={"center"}
+            >
+              Proyects
+            </Text>
+          </Button>
+        </GridItem>
+      </Grid>
     </Box >
   )
 }

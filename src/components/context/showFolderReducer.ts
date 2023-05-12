@@ -1,7 +1,10 @@
 import { ShowFolderState } from './';
 
 type ShowFolderActionType = 
-  | {type: 'TOGGLE_SHOW_FOLDER'}
+  | {type: 'TOGGLE_SHOW_FOLDER', payload: {
+        title: string,
+        description : string,
+  }}
 
 export const showFolderReducer = (state:ShowFolderState, action:ShowFolderActionType): ShowFolderState => {
     switch (action.type) {
@@ -9,7 +12,11 @@ export const showFolderReducer = (state:ShowFolderState, action:ShowFolderAction
 
            return {
                 ...state,
-                isOpen: !state.isOpen
+                isOpen: !state.isOpen,
+                infoFolder: {
+                    title: action.payload.title,
+                    description: action.payload.description
+                }
             }
 
         default:
