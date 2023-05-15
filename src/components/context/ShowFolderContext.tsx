@@ -5,9 +5,9 @@ export interface ShowFolderContextProps {
     infoFolder: {
         title: string;
         description: string;
-    }
-
-    toggleShowFolder: (title: string, description: string) => void;
+    };
+    proyects: string[];
+    toggleShowFolder: (title: string, description: string, proyects?: string[]) => void;
 }
 
 export const ShowFolderContext = createContext({} as ShowFolderContextProps);

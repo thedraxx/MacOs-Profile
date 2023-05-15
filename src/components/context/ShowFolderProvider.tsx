@@ -7,6 +7,7 @@ export interface ShowFolderState {
         title: string;
         description: string;
     }
+    proyects: string[];
 }
 
 const ShowFolder_INITIAL_STATE: ShowFolderState = {
@@ -14,7 +15,8 @@ const ShowFolder_INITIAL_STATE: ShowFolderState = {
     infoFolder: {
         title: '',
         description: ''
-    }
+    },
+    proyects: []
 };
 
 interface Props {
@@ -26,12 +28,17 @@ export const ShowFolderProvider = ({ children }: Props) => {
     const [state, dispatch] = useReducer(showFolderReducer, ShowFolder_INITIAL_STATE)
 
 
-    const toggleShowFolder = (title: string = "", description: string = "") => {
+    const toggleShowFolder = (title: string = "", description: string = "", proyects?: string[]) => {
+
+
+
+
         dispatch({
             type: 'TOGGLE_SHOW_FOLDER',
             payload: {
                 title,
-                description
+                description,
+                proyects: !proyects ? [] : proyects
             }
         })
     }
@@ -40,7 +47,7 @@ export const ShowFolderProvider = ({ children }: Props) => {
     return (
         <ShowFolderContext.Provider value={{
             ...state,
-            toggleShowFolder
+            toggleShowFolder,
         }}>
             {children}
         </ShowFolderContext.Provider>

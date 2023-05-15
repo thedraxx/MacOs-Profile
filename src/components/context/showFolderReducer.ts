@@ -4,6 +4,7 @@ type ShowFolderActionType =
   | {type: 'TOGGLE_SHOW_FOLDER', payload: {
         title: string,
         description : string,
+        proyects?: string[]
   }}
 
 export const showFolderReducer = (state:ShowFolderState, action:ShowFolderActionType): ShowFolderState => {
@@ -16,7 +17,8 @@ export const showFolderReducer = (state:ShowFolderState, action:ShowFolderAction
                 infoFolder: {
                     title: action.payload.title,
                     description: action.payload.description
-                }
+                },
+                proyects: !action.payload.proyects ? [] : action.payload.proyects
             }
 
         default:

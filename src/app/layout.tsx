@@ -1,9 +1,7 @@
-// app/providers.tsx
+
 'use client'
-import TopBar from '@/components/TopBar/TopBar'
 import './globals.css'
-import { ChakraProvider, Box } from '@chakra-ui/react';
-import ShowFolder from '@/components/ShowFolder/ShowFolder';
+import { ChakraProvider } from '@chakra-ui/react';
 import { GlobalThemeChakra } from '../theme/Theme';
 import { ShowFolderProvider } from '@/components/context';
 
@@ -20,23 +18,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ShowFolderProvider>
-        <ChakraProvider
-          theme={GlobalThemeChakra}
-        >
-
-          <Box
-            bg="gray.200"
-            h="100vh"
-            backgroundImage="/monterey.jpg"
-            backgroundSize="cover"
-          >
-            <TopBar />
-
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{metadata.title}</title>
+      </head>
+      <body>
+        <ShowFolderProvider>
+          <ChakraProvider theme={GlobalThemeChakra}>
             {children}
-          </Box>
-        </ChakraProvider>
-      </ShowFolderProvider>
+          </ChakraProvider>
+        </ShowFolderProvider>
+      </body>
     </html>
   )
 }

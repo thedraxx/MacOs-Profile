@@ -1,11 +1,11 @@
-import { Box, Button, Stack, Text, } from '@chakra-ui/react';
+import { Box, Button, Grid, Stack, Text, } from '@chakra-ui/react';
 import React, { useContext } from 'react'
 import Draggable from 'react-draggable';
 import { ShowFolderContext } from '../context';
 
 const ShowFolder = () => {
 
-    const { infoFolder, toggleShowFolder } = useContext(ShowFolderContext);
+    const { infoFolder, toggleShowFolder, proyects } = useContext(ShowFolderContext);
 
     return (
         <Draggable>
@@ -161,7 +161,27 @@ const ShowFolder = () => {
 
                 >
                     {
-                        infoFolder.description
+                        proyects.length > 0 ?
+                            <Grid templateColumns="repeat(1, 1fr)" gap={2}>
+                                {
+                                    proyects.map((proyect, index) => (
+                                        <Button
+                                            key={index}
+                                            colorScheme="teal"
+                                            variant="outline"
+                                            size="lg"
+                                            onClick={() => { toggleShowFolder("", "") }}
+                                        >
+                                            {proyect}
+                                        </Button>
+                                    ))
+
+
+                                }
+
+                            </Grid>
+                            :
+                            infoFolder.description
                     }
                 </Box>
             </Box>
