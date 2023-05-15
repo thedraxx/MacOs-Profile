@@ -68,13 +68,13 @@ export default function CurriculumVitae() {
                 paddingTop={300}
                 paddingBottom={400}
                 justifyContent={"row"}
-                backgroundColor={"green"}
+                backgroundColor={"#42B983"}
             >
 
                 <Box
-                    backgroundColor={"white"}
-                    w="50%"
-
+                    w="100%"
+                    paddingLeft={400}
+                    paddingRight={400}
                     justifyContent={"row"}
                     display={"flex"}
                     flexDirection={"column"}
@@ -84,18 +84,87 @@ export default function CurriculumVitae() {
                 >
                     <Text
                         fontSize="xl"
-                        fontWeight="bold"
+                        textAlign="center"
+                        color="white"
+                        marginTop="20px"
+                    >
+                        We can spend a lot of time listing every work I made, or I can give you my GitHub and some of the main projects I made.
+
+                    </Text>
+
+
+                    <Text
+                        fontSize="xl"
+                        textAlign="center"
+                        color="white"
+                        marginTop="20px"
+                    >
+                        Like Trency and it's API, used to locate trains in realtime for almost every station in Buenos Aires.
+                    </Text>
+
+                    <Text
+                        fontSize="xl"
+                        textAlign="center"
+                        color="white"
+                        marginTop="20px"
+                    >
+                        Or Mapgen, a free service for NGOs and community services, used by fire departements, police, etc. Used also to promote 2 laws (I can talk more about this in our call tomorrow)                    </Text>
+                </Box>
+
+
+            </Box>
+
+
+
+
+
+            {/*  */}
+            <Box
+                w="100%"
+                paddingTop={300}
+                paddingBottom={400}
+                justifyContent={"row"}
+
+            >
+
+                <Box
+                    w="100%"
+                    paddingLeft={400}
+                    paddingRight={400}
+                    justifyContent={"row"}
+                    display={"flex"}
+                    flexDirection={"column"}
+                    alignItems={"center"}
+                    flex={"1"}
+
+                >
+                    <Text
+                        fontSize="xl"
                         textAlign="center"
                         color="black"
                         marginTop="20px"
                     >
                         We can spend a lot of time listing every work I made, or I can give you my GitHub and some of the main projects I made.
 
-                        Like Trency and it's API, used to locate trains in realtime for almost every station in Buenos Aires.
-
-                        Or Mapgen, a free service for NGOs and community services, used by fire departements, police, etc. Used also to promote 2 laws (I can talk more about this in our call tomorrow)
                     </Text>
 
+
+                    <Text
+                        fontSize="xl"
+                        textAlign="center"
+                        color="white"
+                        marginTop="20px"
+                    >
+                        Like Trency and it's API, used to locate trains in realtime for almost every station in Buenos Aires.
+                    </Text>
+
+                    <Text
+                        fontSize="xl"
+                        textAlign="center"
+                        color="white"
+                        marginTop="20px"
+                    >
+                        Or Mapgen, a free service for NGOs and community services, used by fire departements, police, etc. Used also to promote 2 laws (I can talk more about this in our call tomorrow)                    </Text>
                 </Box>
 
 

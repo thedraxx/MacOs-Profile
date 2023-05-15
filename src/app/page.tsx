@@ -40,13 +40,13 @@ export default function Home() {
 
         <Grid
           templateColumns={{
-            base: "repeat(3, 1fr)",
-            sm: "repeat(4, 1fr)",
-            md: "repeat(4, 1fr)",
-            lg: "repeat(4, 1fr)",
-            xl: "repeat(4, 1fr)",
+            base: "repeat(1, 1fr)",
+            sm: "repeat(1, 1fr)",
+            md: "repeat(5, 1fr)",
+            lg: "repeat(5, 1fr)",
+            xl: "repeat(5, 1fr)",
           }}
-          gap={4}
+          gap={2}
           marginTop={5}
           marginBottom={5}
         >

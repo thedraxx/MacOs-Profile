@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
-import { Box, Button } from "@chakra-ui/react"
-import Image from 'next/image'
+import React, { useState } from 'react';
+import { Box, Button } from "@chakra-ui/react";
+import Image from 'next/image';
 
-const TopBar = () => {
-  const [isFullscreen, setIsFullscreen] = useState(false);
+const TopBar: React.FC = () => {
+  const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
 
   const handleFullscreenChange = () => {
     setIsFullscreen(document.fullscreenElement !== null);
   };
-
 
   const toggleFullscreen = () => {
     if (!isFullscreen) {
@@ -18,7 +17,9 @@ const TopBar = () => {
     }
   };
 
-  document.addEventListener('fullscreenchange', handleFullscreenChange);
+  if (typeof document !== 'undefined') {
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+  }
 
   return (
     <>
@@ -87,4 +88,4 @@ const TopBar = () => {
   )
 }
 
-export default TopBar
+export default TopBar;
