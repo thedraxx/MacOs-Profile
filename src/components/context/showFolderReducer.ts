@@ -1,10 +1,15 @@
 import { ShowFolderState } from './';
 
+type Proyect = {
+    name: string;
+    url: string;
+}
+
 type ShowFolderActionType = 
   | {type: 'TOGGLE_SHOW_FOLDER', payload: {
         title: string,
         description : string,
-        proyects?: string[]
+        proyects?: Proyect[]
   }}
 
 export const showFolderReducer = (state:ShowFolderState, action:ShowFolderActionType): ShowFolderState => {

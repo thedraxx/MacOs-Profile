@@ -1,11 +1,15 @@
-import { Box, Button, Grid, Stack, Text, } from '@chakra-ui/react';
+import { Box, Grid, GridItem, Stack, Text, useBreakpointValue, } from '@chakra-ui/react';
 import React, { useContext } from 'react'
 import Draggable from 'react-draggable';
 import { ShowFolderContext } from '../context';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const ShowFolder = () => {
 
     const { infoFolder, toggleShowFolder, proyects } = useContext(ShowFolderContext);
+    const columnSize = useBreakpointValue({ base: "1fr", sm: "repeat(2, 1fr)", md: "repeat(3, 1fr)" });
+    const rowSize = useBreakpointValue({ base: "1fr", sm: "1fr", md: "1fr" });
 
     return (
         <Draggable>
@@ -39,7 +43,6 @@ const ShowFolder = () => {
                     "translate(0px, 0px)"
                 }
             >
-
                 <Box
                     display="flex"
                     position={"absolute"}
@@ -81,7 +84,6 @@ const ShowFolder = () => {
                             }}
                         >
                         </p>
-
                         <p
                             className="chackraText card "
                             style={{
@@ -112,7 +114,6 @@ const ShowFolder = () => {
                                 width: "1rem",
                                 height: "1rem",
                             }}
-
                         >
                         </p>
                     </Stack>
@@ -158,28 +159,66 @@ const ShowFolder = () => {
                     alignItems="center"
                     marginTop={1}
                     w={"85%"}
-
                 >
                     {
                         proyects.length > 0 ?
-                            <Grid templateColumns="repeat(1, 1fr)" gap={2}>
+                            <>
                                 {
-                                    proyects.map((proyect, index) => (
-                                        <Button
-                                            key={index}
-                                            colorScheme="teal"
-                                            variant="outline"
-                                            size="lg"
-                                            onClick={() => { toggleShowFolder("", "") }}
+                                    <Box p={2}>
+                                        <Grid
+                                            templateColumns={columnSize}  // Define las columnas del grid según el tamaño de la pantalla
+                                            templateRows={rowSize}        // Define las filas del grid según el tamaño de la pantalla
+                                            gap={4}                       // Define el espacio entre las celdas
+                                            justifyContent="center"       // Define la alineación horizontal de las celdas
+                                            alignItems="center"           // Define la alineación vertical de las celdas
+                                            w={"100%"}
+                                            h={"100%"}
+                                            marginTop={5}
                                         >
-                                            {proyect}
-                                        </Button>
-                                    ))
-
-
+                                            {proyects.map((proyect, index) => (
+                                                <GridItem
+                                                    key={index}
+                                                    rowSpan={1}
+                                                    colSpan={1}
+                                                    borderRadius="10px"
+                                                    display="flex"
+                                                    padding={2}
+                                                    bg={"#035efa"}
+                                                    justifyContent="center"
+                                                    alignItems="center"
+                                                >
+                                                    <Link href={proyect.url}>
+                                                        <Box
+                                                            display="flex"
+                                                            flexDirection={"column"}
+                                                            justifyContent="center"
+                                                            alignItems="center"
+                                                        >
+                                                            <Image
+                                                                src="/firefox.png"
+                                                                alt="Picture of the author"
+                                                                width={60}
+                                                                height={60}
+                                                            />
+                                                            <Text
+                                                                marginTop={2}
+                                                                fontSize={{
+                                                                    base: "0.7rem",
+                                                                    sm: "1rem",
+                                                                    md: "1.2rem",
+                                                                }}
+                                                                textAlign={"center"}
+                                                            >
+                                                                {proyect.name}
+                                                            </Text>
+                                                        </Box>
+                                                    </Link>
+                                                </GridItem>
+                                            ))}
+                                        </Grid>
+                                    </Box>
                                 }
-
-                            </Grid>
+                            </>
                             :
                             infoFolder.description
                     }

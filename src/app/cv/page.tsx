@@ -18,10 +18,11 @@ export default function CurriculumVitae() {
         >
 
             <Box
-                w="50%"
+                w="35%"
                 paddingTop={300}
                 paddingBottom={400}
                 justifyContent={"row"}
+
             >
 
                 <Image
@@ -73,17 +74,19 @@ export default function CurriculumVitae() {
 
                 <Box
                     w="100%"
-                    paddingLeft={400}
-                    paddingRight={400}
+                    paddingLeft={600}
+                    paddingRight={600}
                     justifyContent={"row"}
                     display={"flex"}
                     flexDirection={"column"}
                     alignItems={"center"}
                     flex={"1"}
+                    justifyItems={"center"}
+                    justifySelf={"center"}
 
                 >
                     <Text
-                        fontSize="xl"
+                        fontSize="lg"
                         textAlign="center"
                         color="white"
                         marginTop="20px"
@@ -94,7 +97,7 @@ export default function CurriculumVitae() {
 
 
                     <Text
-                        fontSize="xl"
+                        fontSize="lg"
                         textAlign="center"
                         color="white"
                         marginTop="20px"
@@ -103,12 +106,13 @@ export default function CurriculumVitae() {
                     </Text>
 
                     <Text
-                        fontSize="xl"
+                        fontSize="lg"
                         textAlign="center"
                         color="white"
                         marginTop="20px"
                     >
-                        Or Mapgen, a free service for NGOs and community services, used by fire departements, police, etc. Used also to promote 2 laws (I can talk more about this in our call tomorrow)                    </Text>
+                        Or Mapgen, a free service for NGOs and community services, used by fire departements, police, etc. Used also to promote 2 laws (I can talk more about this in our call tomorrow)
+                    </Text>
                 </Box>
 
 

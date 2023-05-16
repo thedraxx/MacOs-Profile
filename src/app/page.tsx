@@ -6,6 +6,7 @@ import { ShowFolderContext } from '@/components/context';
 import ShowFolder from '@/components/ShowFolder/ShowFolder';
 import Link from 'next/link';
 import TopBar from '@/components/TopBar/TopBar';
+import { Proyects } from '@/components/database/Proyects';
 
 export default function Home() {
 
@@ -108,6 +109,9 @@ export default function Home() {
                 color: "black",
                 borderRadius: "10px"
               }}
+              onClick={() => {
+                window.open("https://frank.dev.ar/", "_blank")
+              }}
             >
               <Image
                 src="/firefox.png"
@@ -148,7 +152,7 @@ export default function Home() {
                 color: "black",
                 borderRadius: "10px"
               }}
-              onClick={(e) => {
+              onClick={() => {
                 window.open("https://twitter.com/ThedraxxWorld", "_blank")
               }}
             >
@@ -189,7 +193,7 @@ export default function Home() {
                 color: "black",
                 borderRadius: "10px"
               }}
-              onClick={(e) => {
+              onClick={() => {
                 toggleShowFolder("TextEdit", "This is a WIP to share all the links I need, this was made in NextJS, ChakraUI and Typescript.");
               }}
             >
@@ -230,8 +234,8 @@ export default function Home() {
                 color: "black",
                 borderRadius: "10px"
               }}
-              onClick={(e) => {
-                toggleShowFolder("TextEdit", "This is a WIP to share all the links I need, this was made in NextJS, ChakraUI and Typescript.", ["hola", "sexo"]);
+              onClick={() => {
+                toggleShowFolder("TextEdit", "This is a WIP to share all the links I need, this was made in NextJS, ChakraUI and Typescript.", Proyects);
               }}
             >
               <Image
