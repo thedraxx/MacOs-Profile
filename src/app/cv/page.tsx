@@ -1,178 +1,180 @@
 'use client'
-import React from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { Box, Button, ButtonGroup, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
+import ChangeColor from '@/components/changeColor/ChangeColor';
 
 export default function CurriculumVitae() {
 
+    const [Page, setPage] = useState(0)
+
+    const handlePage = (page: number) => {
+        if (page < 0) {
+            return
+        }
+        if (page > 3) {
+            return
+        }
+        setPage(page)
+    }
+
     return (
-        <Box
-            width={"100%"}
-            height={"100%"}
-
-            display={"flex"}
-            flexDirection={"column"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            flex={"1"}
-        >
+        <Stack direction={"column"}>
 
             <Box
-                w="35%"
-                paddingTop={300}
-                paddingBottom={400}
-                justifyContent={"row"}
+                width={"100%"}
+                height={800}
+                display={"flex"}
+                justifyContent={"center"}
+                alignItems={"center"}
 
             >
+                <ChangeColor />
+                {
+                    Page === 0 ?
+                        <Box
+                            marginTop={200}
+                            marginBottom={200}
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                            display={"flex"}
+                            flexDirection={"row"}
+                        >
+                            <Box
+                                w="50%"
+                                justifyContent={"center"}
+                                alignItems={"center"}
+                                display={"flex"}
+                                flexDirection={"column"}
+                            >
+                                <Text
+                                    fontSize="xl"
+                                    fontWeight="bold"
+                                    textAlign="center"
+                                    color="black"
+                                    marginTop="20px"
+                                >
+                                    I'm Francisco Cerrano, a frontend developer from Rosario, Argentina.
+                                </Text>
+                                <Text
+                                    fontSize="md"
+                                    textAlign="center"
+                                    color="black"
+                                    marginTop="20px"
+                                    marginLeft="20px"
+                                    marginRight="20px"
+                                >
+                                    I usually work with the React stack (Next.js for example), but i'm open to technologies like GraphQL, Angular or Vue. I'm 23 years old and I have a Electromechanical Technician degree from Escuela Industrial Nrta Sra de la Guardia and Software Developer Degree from Escuela Superior de Comercio Justo Jose de Urquiza, I never stopped learning.
+                                </Text>
+                            </Box>
+                            <Image
+                                src="/autor.jpg"
+                                alt="Picture of the author"
+                                width={400}
+                                height={400}
+                                style={{
+                                    borderRadius: "10%",
+                                    border: "5px solid black ",
+                                    margin: "auto",
+                                    marginTop: "20px",
+                                    marginLeft: "20px",
+                                    marginRight: "20px",
+                                }}
+                            />
 
-                <Image
-                    src="/autor.jpg"
-                    alt="Picture of the author"
-                    width={120}
-                    height={0}
-                    style={{
-                        borderRadius: "50%",
-                        border: "5px solid black ",
-                        margin: "auto",
-                        marginTop: "20px",
+                        </Box>
 
+                        :
+
+                        Page === 1 ?
+
+                            <Box
+                                marginTop={200}
+                                marginBottom={200}
+                                justifyContent={"center"}
+                                alignItems={"center"}
+                                display={"flex"}
+                                flexDirection={"row"}
+                                backgroundColor={"#E91E63"}
+                                paddingTop={200}
+                                paddingBottom={200}
+                            >
+                                <Box
+                                    w="50%"
+                                    justifyContent={"center"}
+                                    alignItems={"center"}
+                                    display={"flex"}
+                                    flexDirection={"column"}
+                                >
+
+                                    <Text
+                                        fontSize="xl"
+                                        textAlign="center"
+                                        color="black"
+                                        marginTop="20px"
+                                        marginLeft="20px"
+                                        marginRight="20px"
+                                        textColor={"white"}
+                                    >
+                                        I started working on frontend in 2020, with jQuery and vanilla Javascript, I had started my university studies during those times in the meanwhile doing landings or small applications, also doing apps in AS3 (sorry, you have to know that),
+                                        you can see the whole timeline in my LinkedIN
+                                    </Text>
+                                </Box>
+
+
+                            </Box>
+
+                            :
+
+                            Page === 2 ?
+                                <Box>
+
+                                </Box>
+                                :
+                                <Box>
+
+                                </Box>
+
+                }
+
+            </Box>
+            <ButtonGroup
+                variant="outline"
+                spacing="6"
+                display={"flex"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                position={"absolute"}
+                bottom={0}
+                left={0}
+                right={0}
+                zIndex={100}
+            >
+                <Button
+                    colorScheme="teal"
+                    variant="outline"
+                    backgroundColor={"#E91E63"}
+                    color={"white"}
+                    padding={"25px"}
+                    onClick={() => {
+                        handlePage(Page - 1)
                     }}
-                />
-
-                <Text
-                    fontSize="xl"
-                    fontWeight="bold"
-                    textAlign="center"
-                    color="black"
-                    marginTop="20px"
-
                 >
-                    I'm Gonzalo Pozzo, a frontend developer from Buenos Aires, Argentina.
-                </Text>
-                <Text
-                    fontSize="md"
-
-                    textAlign="center"
-                    color="black"
-                    marginTop="20px"
-
+                    {`<`}
+                </Button>
+                <Button
+                    colorScheme="teal"
+                    variant="outline"
+                    backgroundColor={"#E91E63"}
+                    onClick={() => {
+                        handlePage(Page + 1)
+                    }}
+                    color={"white"}
+                    padding={"25px"}
                 >
-                    I usually work with the React / Redux stack, but i'm open to technologies like GraphQL, Elm or Vue. I'm 31 years old and I have a Multimedia Design degree from Escuela Davinci, I never stopped learning.
-                </Text>
-
-            </Box>
-
-
-            {/*  */}
-            <Box
-                w="100%"
-                paddingTop={300}
-                paddingBottom={400}
-                justifyContent={"row"}
-                backgroundColor={"#42B983"}
-            >
-
-                <Box
-                    w="100%"
-                    paddingLeft={600}
-                    paddingRight={600}
-                    justifyContent={"row"}
-                    display={"flex"}
-                    flexDirection={"column"}
-                    alignItems={"center"}
-                    flex={"1"}
-                    justifyItems={"center"}
-                    justifySelf={"center"}
-
-                >
-                    <Text
-                        fontSize="lg"
-                        textAlign="center"
-                        color="white"
-                        marginTop="20px"
-                    >
-                        We can spend a lot of time listing every work I made, or I can give you my GitHub and some of the main projects I made.
-
-                    </Text>
-
-
-                    <Text
-                        fontSize="lg"
-                        textAlign="center"
-                        color="white"
-                        marginTop="20px"
-                    >
-                        Like Trency and it's API, used to locate trains in realtime for almost every station in Buenos Aires.
-                    </Text>
-
-                    <Text
-                        fontSize="lg"
-                        textAlign="center"
-                        color="white"
-                        marginTop="20px"
-                    >
-                        Or Mapgen, a free service for NGOs and community services, used by fire departements, police, etc. Used also to promote 2 laws (I can talk more about this in our call tomorrow)
-                    </Text>
-                </Box>
-
-
-            </Box>
-
-
-
-
-
-            {/*  */}
-            <Box
-                w="100%"
-                paddingTop={300}
-                paddingBottom={400}
-                justifyContent={"row"}
-
-            >
-
-                <Box
-                    w="100%"
-                    paddingLeft={400}
-                    paddingRight={400}
-                    justifyContent={"row"}
-                    display={"flex"}
-                    flexDirection={"column"}
-                    alignItems={"center"}
-                    flex={"1"}
-
-                >
-                    <Text
-                        fontSize="xl"
-                        textAlign="center"
-                        color="black"
-                        marginTop="20px"
-                    >
-                        We can spend a lot of time listing every work I made, or I can give you my GitHub and some of the main projects I made.
-
-                    </Text>
-
-
-                    <Text
-                        fontSize="xl"
-                        textAlign="center"
-                        color="white"
-                        marginTop="20px"
-                    >
-                        Like Trency and it's API, used to locate trains in realtime for almost every station in Buenos Aires.
-                    </Text>
-
-                    <Text
-                        fontSize="xl"
-                        textAlign="center"
-                        color="white"
-                        marginTop="20px"
-                    >
-                        Or Mapgen, a free service for NGOs and community services, used by fire departements, police, etc. Used also to promote 2 laws (I can talk more about this in our call tomorrow)                    </Text>
-                </Box>
-
-
-            </Box>
-        </Box>
+                    {`>`}
+                </Button>
+            </ButtonGroup>
+        </Stack >
     )
 }

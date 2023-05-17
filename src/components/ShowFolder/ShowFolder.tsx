@@ -8,7 +8,9 @@ import Image from 'next/image';
 const ShowFolder = () => {
 
     const { infoFolder, toggleShowFolder, proyects } = useContext(ShowFolderContext);
-    const columnSize = useBreakpointValue({ base: "1fr", sm: "repeat(2, 1fr)", md: "repeat(3, 1fr)" });
+    const columnSize = useBreakpointValue({
+        base: "repeat(2, 1fr)", sm: "repeat(2, 1fr)", md: "repeat(4, 1fr)"
+    });
     const rowSize = useBreakpointValue({ base: "1fr", sm: "1fr", md: "1fr" });
 
     return (
@@ -27,14 +29,14 @@ const ShowFolder = () => {
                     sm: "80%",
                     md: "70%",
                     lg: "60%",
-                    xl: "50%",
+                    xl: "40%",
                 }}
                 height={{
                     base: "60%",
                     sm: "50%",
                     md: "50%",
                     lg: "50%",
-                    xl: "50%",
+                    xl: "35%",
                 }}
                 transition="all ease-in-out"
                 borderRadius="10px"
@@ -158,7 +160,7 @@ const ShowFolder = () => {
                     justifyContent="center"
                     alignItems="center"
                     marginTop={1}
-                    w={"85%"}
+                    w={"95%"}
                 >
                     {
                         proyects.length > 0 ?
@@ -183,7 +185,6 @@ const ShowFolder = () => {
                                                     borderRadius="10px"
                                                     display="flex"
                                                     padding={2}
-                                                    bg={"#035efa"}
                                                     justifyContent="center"
                                                     alignItems="center"
                                                 >
@@ -197,15 +198,15 @@ const ShowFolder = () => {
                                                             <Image
                                                                 src="/firefox.png"
                                                                 alt="Picture of the author"
-                                                                width={60}
-                                                                height={60}
+                                                                width={70}
+                                                                height={70}
                                                             />
                                                             <Text
                                                                 marginTop={2}
                                                                 fontSize={{
                                                                     base: "0.7rem",
-                                                                    sm: "1rem",
-                                                                    md: "1.2rem",
+                                                                    sm: "0.7rem",
+                                                                    md: "0.8rem",
                                                                 }}
                                                                 textAlign={"center"}
                                                             >
@@ -224,7 +225,7 @@ const ShowFolder = () => {
                     }
                 </Box>
             </Box>
-        </Draggable>
+        </Draggable >
 
     )
 }
