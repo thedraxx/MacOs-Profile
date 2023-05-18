@@ -9,9 +9,9 @@ https://github.com/thedraxx/MacOs-Profile/assets/55867157/4752c5a0-fb2b-4c86-9a9
 
 ## 📱 Photos of the WEB:
 
-![1](https://github.com/thedraxx/MacOs-Profile/assets/55867157/124a811d-f1eb-41bd-b206-8d76cd0ad44d)
-![2](https://github.com/thedraxx/MacOs-Pr![3](https://github.com/thedraxx/MacOs-Profile/assets/55867157/573f75ca-68d4-445d-b30f-24e2106d909a)
-ofile/assets/55867157/f1a9e270-8d52-42f5-b305-da02544c166e)
+![1](https://github.com/thedraxx/MacOs-Profile/assets/55867157/a81a8597-ca4e-4529-9920-bb6a2d89e003)
+![2](https://github.com/thedraxx/MacOs-Profile/assets/55867157/c44dad21-9012-44e4-87f3-64319c4f6cad)
+![3](https://github.com/thedraxx/MacOs-Profile/assets/55867157/4c17f7bc-fa94-4d34-bea7-a6ad89aadcfd)
 
 <br> The app is made with the following technologies:</br>
 
