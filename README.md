@@ -17,14 +17,12 @@ https://github.com/thedraxx/MacOs-Profile/assets/55867157/4752c5a0-fb2b-4c86-9a9
 
 ```
 ## ⚛️ React
-```
 ## ⚛️ Next JS:
-```
 ## ⚛️ Chackra UI 
-
 ## ⚛️ Typescript
 
-## ✉️ Contact
+
+## ✉️ Contact:
 
 gmail: cerrano.francisco22@gmail.com
 
