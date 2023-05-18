@@ -1,12 +1,17 @@
 'use client'
-import React, { useState } from 'react';
-import { Box, Button, ButtonGroup, Stack, Text } from '@chakra-ui/react';
-import Image from 'next/image';
+import React, { useContext, useState } from 'react';
+import { Box, Button, ButtonGroup, Stack, Text, Link } from '@chakra-ui/react';
 import ChangeColor from '@/components/changeColor/ChangeColor';
+import { AiFillLinkedin, AiFillTwitterCircle, AiFillGithub, AiOutlineMail } from 'react-icons/ai';
+import { Image } from '@chakra-ui/react'
+import { ChangeColorContext } from '@/components/context/ChangeColor';
+
 
 export default function CurriculumVitae() {
 
     const [Page, setPage] = useState(0)
+    const { colorActive } = useContext(ChangeColorContext)
+
 
     const handlePage = (page: number) => {
         if (page < 0) {
@@ -38,14 +43,28 @@ export default function CurriculumVitae() {
                             justifyContent={"center"}
                             alignItems={"center"}
                             display={"flex"}
-                            flexDirection={"row"}
+                            flexDirection={{
+                                base: "column",
+                                sm: "column",
+                                md: "row",
+                                lg: "row",
+                                xl: "row",
+                            }}
+
                         >
                             <Box
-                                w="50%"
-                                justifyContent={"center"}
-                                alignItems={"center"}
-                                display={"flex"}
-                                flexDirection={"column"}
+                                order={[1, 1, 1, 2]} // Define el orden en dispositivos móviles
+                                w={{
+                                    base: "100%",
+                                    sm: "100%",
+                                    md: "50%",
+                                    lg: "50%",
+                                    xl: "50%",
+                                }}
+                                justifyContent="center"
+                                alignItems="center"
+                                display="flex"
+                                flexDirection="column"
                             >
                                 <Text
                                     fontSize="xl"
@@ -70,15 +89,25 @@ export default function CurriculumVitae() {
                             <Image
                                 src="/autor.jpg"
                                 alt="Picture of the author"
-                                width={400}
-                                height={400}
+                                width={{
+                                    base: "70%",
+                                    sm: "40%",
+                                    md: "30%",
+                                    lg: "30%",
+                                    xl: "20%",
+                                }}
+                                border="10px"
+                                borderRadius="25%"
+                                borderColor={colorActive}
+                                borderStyle="solid"
+
+
                                 style={{
-                                    borderRadius: "10%",
-                                    border: "5px solid black ",
                                     margin: "auto",
                                     marginTop: "20px",
                                     marginLeft: "20px",
                                     marginRight: "20px",
+                                    position: "relative",
                                 }}
                             />
 
@@ -95,12 +124,18 @@ export default function CurriculumVitae() {
                                 alignItems={"center"}
                                 display={"flex"}
                                 flexDirection={"row"}
-                                backgroundColor={"#E91E63"}
+                                backgroundColor={colorActive}
                                 paddingTop={200}
                                 paddingBottom={200}
                             >
                                 <Box
-                                    w="50%"
+                                    w={{
+                                        base: "100%",
+                                        sm: "100%",
+                                        md: "50%",
+                                        lg: "50%",
+                                        xl: "50%",
+                                    }}
                                     justifyContent={"center"}
                                     alignItems={"center"}
                                     display={"flex"}
@@ -116,25 +151,170 @@ export default function CurriculumVitae() {
                                         marginRight="20px"
                                         textColor={"white"}
                                     >
-                                        I started working on frontend in 2020, with jQuery and vanilla Javascript, I had started my university studies during those times in the meanwhile doing landings or small applications, also doing apps in AS3 (sorry, you have to know that),
-                                        you can see the whole timeline in my LinkedIN
+                                        I started working on frontend in 2020, with jQuery and vanilla Javascript, I had started my university studies during those times in the meanwhile doing landings or small applications,
+                                        you can see the whole timeline in my {
+                                            <Link
+                                                href="https://www.linkedin.com/in/iscodev/"
+                                            >
+                                                LinkedIn
+                                            </Link>
+                                        }
                                     </Text>
                                 </Box>
-
-
                             </Box>
 
                             :
 
                             Page === 2 ?
-                                <Box>
+                                <Box
+                                    marginTop={200}
+                                    marginBottom={200}
+                                    justifyContent={"center"}
+                                    alignItems={"center"}
+                                    display={"flex"}
+                                    flexDirection={"row"}
+                                    backgroundColor={"#ffffff"}
+                                    paddingTop={200}
+                                    paddingBottom={200}
+                                >
+                                    <Box
+                                        w={{
+                                            base: "100%",
+                                            sm: "100%",
+                                            md: "50%",
+                                            lg: "50%",
+                                            xl: "50%",
+                                        }}
+                                        justifyContent={"center"}
+                                        alignItems={"center"}
+                                        display={"flex"}
+                                        flexDirection={"column"}
+                                    >
+
+                                        <Text
+                                            fontSize="xl"
+                                            textAlign="center"
+                                            color="black"
+                                            marginTop="20px"
+                                            marginLeft="20px"
+                                            marginRight="20px"
+                                            textColor={"black"}
+                                        >
+                                            These days I work on personal projects, learn new technologies, and occasionally take on freelance projects. Yes, I love learning every day.
+
+                                        </Text>
+                                    </Box>
+
 
                                 </Box>
                                 :
-                                <Box>
 
+                                <Box
+                                    marginTop={200}
+                                    marginBottom={200}
+                                    justifyContent="center"
+                                    alignItems="center"
+                                    display="flex"
+                                    flexDirection="row"
+                                    backgroundColor={colorActive}
+                                    paddingTop={200}
+                                    paddingBottom={200}
+                                    width="100%"
+                                >
+                                    <Box
+                                        w={{
+                                            base: "100%",
+                                            sm: "100%",
+                                            md: "50%",
+                                            lg: "50%",
+                                            xl: "50%",
+                                        }}
+                                        justifyContent="center"
+                                        alignItems="center"
+                                        display="flex"
+                                        flexDirection="column"
+                                    >
+                                        <Text
+                                            fontSize="xl"
+                                            textAlign="center"
+                                            color="black"
+                                            justifyContent="center"
+                                            alignItems="center"
+                                            marginLeft="20px"
+                                            marginRight="20px"
+                                            textColor="white"
+                                        >
+                                            Now you know a lot about me, let me know something about you at
+                                            <Box justifyContent="center" alignItems="center" display="flex" flexDirection="row">
+                                                <Link
+                                                    href="https://www.linkedin.com/in/iscodev/"
+                                                >
+                                                    <AiFillLinkedin
+
+                                                        style={{
+                                                            marginLeft: "10px",
+                                                            marginRight: "10px",
+                                                            marginTop: "10px",
+                                                            color: "white",
+                                                            fontSize: "50px",
+                                                            cursor: "pointer"
+                                                        }}
+                                                    />
+
+                                                </Link>
+
+                                                <Link
+                                                    href="https://github.com/thedraxx"
+                                                >
+
+                                                    <AiFillGithub
+                                                        style={{
+                                                            marginLeft: "10px",
+                                                            marginRight: "10px",
+                                                            marginTop: "10px",
+                                                            color: "white",
+                                                            fontSize: "50px",
+                                                            cursor: "pointer"
+                                                        }}
+                                                    />
+                                                </Link>
+
+                                                <Link
+                                                    href="https://twitter.com/ThedraxxWorld"
+                                                >
+
+                                                    <AiFillTwitterCircle
+                                                        style={{
+                                                            marginLeft: "10px",
+                                                            marginRight: "10px",
+                                                            marginTop: "10px",
+                                                            color: "white",
+                                                            fontSize: "50px",
+                                                            cursor: "pointer"
+                                                        }}
+                                                    />
+                                                </Link>
+
+                                                <Link
+
+                                                    href={"mailto:frankdevarg@gmail.com?subject=Subject&body=Body%20goes%20here"}
+                                                >
+                                                    <AiOutlineMail
+                                                        style={{
+                                                            marginLeft: "10px",
+                                                            marginRight: "10px",
+                                                            marginTop: "10px",
+                                                            color: "white",
+                                                            fontSize: "50px",
+                                                            cursor: "pointer"
+                                                        }}
+                                                    />
+                                                </Link>
+                                            </Box>
+                                            See you tomorrow soon! 👋
+                                        </Text>
+                                    </Box>
                                 </Box>
-
                 }
 
             </Box>
@@ -144,33 +324,41 @@ export default function CurriculumVitae() {
                 display={"flex"}
                 justifyContent={"center"}
                 alignItems={"center"}
-                position={"absolute"}
+                position={{
+                    base: "fixed",
+                    md: "relative",
+                    lg: "absolute",
+                    xl: "absolute",
+
+                }}
                 bottom={0}
                 left={0}
                 right={0}
                 zIndex={100}
             >
                 <Button
-                    colorScheme="teal"
+                    colorScheme="gray"
                     variant="outline"
-                    backgroundColor={"#E91E63"}
+                    backgroundColor={colorActive}
                     color={"white"}
                     padding={"25px"}
                     onClick={() => {
                         handlePage(Page - 1)
                     }}
+                    isActive={Page === 0}
                 >
                     {`<`}
                 </Button>
                 <Button
-                    colorScheme="teal"
+                    colorScheme="gray"
                     variant="outline"
-                    backgroundColor={"#E91E63"}
+                    backgroundColor={colorActive}
                     onClick={() => {
                         handlePage(Page + 1)
                     }}
                     color={"white"}
                     padding={"25px"}
+                    isActive={Page === 3}
                 >
                     {`>`}
                 </Button>

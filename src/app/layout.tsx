@@ -3,7 +3,8 @@
 import './globals.css'
 import { ChakraProvider } from '@chakra-ui/react';
 import { GlobalThemeChakra } from '../theme/Theme';
-import { ShowFolderProvider } from '@/components/context';
+import { ShowFolderProvider } from '@/components/context/ShowFolder';
+import { ChangeColorProvider } from '@/components/context/ChangeColor';
 
 
 export const metadata = {
@@ -25,9 +26,11 @@ export default function RootLayout({
       </head>
       <body>
         <ShowFolderProvider>
-          <ChakraProvider theme={GlobalThemeChakra}>
-            {children}
-          </ChakraProvider>
+          <ChangeColorProvider>
+            <ChakraProvider theme={GlobalThemeChakra}>
+              {children}
+            </ChakraProvider>
+          </ChangeColorProvider>
         </ShowFolderProvider>
       </body>
     </html>

@@ -2,11 +2,12 @@
 import React, { useContext } from 'react';
 import { Box, Text, Button, Grid, GridItem } from '@chakra-ui/react';
 import Image from 'next/image';
-import { ShowFolderContext } from '@/components/context';
+
 import ShowFolder from '@/components/ShowFolder/ShowFolder';
 import Link from 'next/link';
 import TopBar from '@/components/TopBar/TopBar';
 import { Proyects } from '@/components/database/Proyects';
+import { ShowFolderContext } from '@/components/context/ShowFolder';
 
 export default function Home() {
 

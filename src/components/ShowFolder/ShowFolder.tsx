@@ -1,9 +1,9 @@
 import { Box, Grid, GridItem, Stack, Text, useBreakpointValue, } from '@chakra-ui/react';
 import React, { useContext } from 'react'
 import Draggable from 'react-draggable';
-import { ShowFolderContext } from '../context';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ShowFolderContext } from '../context/ShowFolder';
 
 const ShowFolder = () => {
 
@@ -33,7 +33,7 @@ const ShowFolder = () => {
                 }}
                 height={{
                     base: "60%",
-                    sm: "50%",
+                    sm: "55%",
                     md: "50%",
                     lg: "50%",
                     xl: "35%",
