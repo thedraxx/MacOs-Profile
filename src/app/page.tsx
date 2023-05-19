@@ -2,7 +2,6 @@
 import React, { useContext } from 'react';
 import { Box, Text, Button, Grid, GridItem } from '@chakra-ui/react';
 import Image from 'next/image';
-
 import ShowFolder from '@/components/ShowFolder/ShowFolder';
 import Link from 'next/link';
 import TopBar from '@/components/TopBar/TopBar';
@@ -133,8 +132,6 @@ export default function Home() {
             </Button>
 
           </GridItem>
-
-
 
           <GridItem
             rowSpan={2}

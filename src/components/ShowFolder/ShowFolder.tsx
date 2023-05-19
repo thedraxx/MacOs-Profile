@@ -32,11 +32,11 @@ const ShowFolder = () => {
                     xl: "40%",
                 }}
                 height={{
-                    base: "60%",
-                    sm: "55%",
-                    md: "50%",
-                    lg: "50%",
-                    xl: "35%",
+                    base: "70%",
+                    sm: "65%",
+                    md: "60%",
+                    lg: "60%",
+                    xl: "45%",
                 }}
                 transition="all ease-in-out"
                 borderRadius="10px"
