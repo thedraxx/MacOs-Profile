@@ -5,6 +5,7 @@ import ChangeColor from '@/components/changeColor/ChangeColor';
 import { AiFillLinkedin, AiFillTwitterCircle, AiFillGithub, AiOutlineMail } from 'react-icons/ai';
 import { Image } from '@chakra-ui/react'
 import { ChangeColorContext } from '@/components/context/ChangeColor';
+import GoBackCv from '@/components/GoBackCv/GoBackCv';
 
 
 export default function CurriculumVitae() {
@@ -35,6 +36,7 @@ export default function CurriculumVitae() {
 
             >
                 <ChangeColor />
+                <GoBackCv />
                 {
                     Page === 0 ?
                         <Box
