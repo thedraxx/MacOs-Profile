@@ -1,25 +1,30 @@
 export const Proyects =  [{
-    name: "MyAnimeList",
+    name: "¿Cuanto me sale?",
     url: "https://myanimelist-web.netlify.app/"
   },
+  {
+    name: "MercadoLibre UI",
+    url: "https://clon-mercadolibre-ui.vercel.app/"
+  },
+  {
+    name: "Wordle Clon",
+    url: "https://wordle-clon.netlify.app/"
+  },
+  {
+    name: "Tinder League of Legends",
+    url: "https://cards-lol.vercel.app/"
+  },
+
   {
     name: "Crypto App",
     url: "https://github.com/thedraxx/CryptoApp"
   },
   {
-    name: "MercadoLibre",
-    url: "https://mercadolibre-kohl.vercel.app/"
-  },
-  {
-    name: "Rappi",
+    name: "Rappi App",
     url: "https://github.com/thedraxx/Rappi-Challenge-ReactNative/tree/main"
   },
   {
-    name: "Wordle",
-    url: "https://wordle-clon.netlify.app/"
-  },
-  {
     name: "Weather App",
-    url: "https://github.com/thedraxx/PersonalFlow-Challenge"
+    url: "https://github.com/thedraxx/Weather-App"
   }
   ]

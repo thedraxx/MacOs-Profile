@@ -7,35 +7,22 @@ import Link from 'next/link';
 import TopBar from '@/components/TopBar/TopBar';
 import { Proyects } from '@/components/database/Proyects';
 import { ShowFolderContext } from '@/components/context/ShowFolder';
-import { useInputEvent } from '@/hooks/KonamiHooks';
 import useKonamiCode from '@/hooks/useKonamiCode';
 import KonamiCodePage from '@/components/KonamiCode/KonamiCodePage';
-
 
 export default function Home() {
 
   const { toggleShowFolder, isOpen } = useContext(ShowFolderContext);
   const konamiCode = useKonamiCode();
-  console.log(konamiCode)
 
   return (
     <>
       {
         konamiCode && (
-          <Box
-            position={"absolute"}
-            display={"flex"}
-            flexDirection={"column"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            w={"100%"}
-            h={"100%"}
-            zIndex={1000}
-            bg={"rgba(0,0,0,0.8)"}
-            transition={"all 0.5s ease"}
-            pointerEvents={konamiCode ? "none" : "all"}
-          >
-            <KonamiCodePage />
+          <Box>
+            <KonamiCodePage
+              konamiCode={konamiCode}
+            />
           </Box>
         )
       }
@@ -137,11 +124,11 @@ export default function Home() {
                   borderRadius: "10px"
                 }}
                 onClick={() => {
-                  window.open("https://frank.dev.ar/", "_blank")
+                  window.open("https://github.com/thedraxx", "_blank")
                 }}
               >
                 <Image
-                  src="/firefox.png"
+                  src="/github-logo.png"
                   alt="Picture of the author"
                   width={55}
                   height={55}
@@ -154,7 +141,7 @@ export default function Home() {
                   fontSize={12}
                   textAlign={"center"}
                 >
-                  Portfolio
+                  Github
                 </Text>
               </Button>
 
@@ -182,7 +169,7 @@ export default function Home() {
                 }}
               >
                 <Image
-                  src="/twitter.png"
+                  src="/Twitter-X.png"
                   alt="Picture of the author"
                   width={55}
                   height={55}
@@ -195,7 +182,7 @@ export default function Home() {
                   fontSize={12}
                   textAlign={"center"}
                 >
-                  Twitter
+                  x
                 </Text>
               </Button>
             </GridItem>
@@ -260,7 +247,7 @@ export default function Home() {
                   borderRadius: "10px"
                 }}
                 onClick={() => {
-                  toggleShowFolder("TextEdit", "This is a WIP to share all the links I need, this was made in NextJS, ChakraUI and Typescript.", Proyects);
+                  toggleShowFolder("Proyects", "All of my projects are here", Proyects);
                 }}
               >
                 <Image

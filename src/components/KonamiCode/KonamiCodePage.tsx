@@ -2,10 +2,26 @@
 import { Box, Image, Text } from '@chakra-ui/react'
 import React from 'react'
 
-const KonamiCodePage = () => {
+interface Props {
+    konamiCode: boolean
+}
+
+const KonamiCodePage = ({ konamiCode }: Props) => {
     const marioGIF = 'https://media.tenor.com/q0qduzwIc7cAAAAi/mario-8bit.gif'
     return (
-        <>
+        <Box
+            position={"absolute"}
+            display={"flex"}
+            flexDirection={"column"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            w={"100%"}
+            h={"100%"}
+            zIndex={1000}
+            bg={"rgba(0,0,0,0.8)"}
+            transition={"all 0.5s ease"}
+            pointerEvents={konamiCode ? "none" : "all"}
+        >
             <Image
                 top={0}
                 left={0}
@@ -19,7 +35,7 @@ const KonamiCodePage = () => {
                 alt="logo"
                 transition={"all 0.5s ease"}
             />
-        </>
+        </Box>
     )
 }
 

@@ -1,12 +1,9 @@
 'use client'
 import { Box, Button } from '@chakra-ui/react'
-import React, { useContext } from 'react'
-import { ChangeColorContext } from '../context/ChangeColor'
+import React from 'react'
 import Link from 'next/link'
 
-const GoBackCv = () => {
-
-    const { handleChangeColor } = useContext(ChangeColorContext)
+export const GoBack = () => {
 
     return (
         <>
@@ -34,11 +31,9 @@ const GoBackCv = () => {
                     >
                         Go Back
                     </Button>
-
                 </Box>
             </Link>
         </>
     )
 }
 
-export default GoBackCv
