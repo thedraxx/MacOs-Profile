@@ -66,53 +66,7 @@ export const Page0 = () => {
                     marginLeft="20px"
                     marginRight="20px"
                 >
-                    I'm experienced with the
-                    <a
-                        href='https://es.react.dev/'
-                        target='_blank'
-                        rel='noreferrer'
-                        style={{ color: 'blue', textDecoration: 'underline', marginLeft: "5px", marginRight: "5px" }}
-                    >
-                        React
-                    </a>
-                    stack, often utilizing frameworks like
-                    <a
-                        href='https://nextjs.org/'
-                        target='_blank'
-                        rel='noreferrer'
-                        style={{ color: 'black', textDecoration: 'underline', marginLeft: "5px", marginRight: "5px" }}
-                    >
-                        Next.js.
-                    </a>
-                    However, I'm open to learn new technologies such as
-                    <a
-                        href='https://graphql.org/'
-                        target='_blank'
-                        rel='noreferrer'
-                        style={{ color: '#EA1179', textDecoration: 'underline', marginLeft: "5px", marginRight: "5px" }}
-                    >
-                        GraphQL
-                    </a>
-                    ,
-                    <a
-                        href='https://angular.io/'
-                        target='_blank'
-                        rel='noreferrer'
-                        style={{ color: 'red', textDecoration: 'underline', marginLeft: "5px", marginRight: "5px" }}
-                    >
-                        Angular
-                    </a>
-                    , and
-
-                    <a
-                        href='https://vuejs.org/'
-                        target='_blank'
-                        rel='noreferrer'
-                        style={{ color: 'green', textDecoration: 'underline', marginLeft: "5px", marginRight: "5px" }}
-                    >
-                        Vue
-                    </a>
-                    .
+                    I have experience programming with the React library for frontend development, React Native for mobile applications, and Next.js a framework for server-side rendered and static web applications. Additionally, I have developed using technologies such as C# with Microsoft .NET and Python.
                     I proudly hold both an Electromechanical Technician degree from Escuela Industrial Nrta Sra de la Guardia and a Software Developer Degree from Escuela Superior de Comercio Justo Jose de Urquiza.
                 </Text>
             </Box>

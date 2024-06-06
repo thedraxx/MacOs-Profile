@@ -38,8 +38,7 @@ export const Page3 = () => {
                     marginRight="20px"
                     textColor={"black"}
                 >
-                    These days I work on personal projects, learn new technologies, and occasionally take on freelance projects. Yes, I love learning every day.
-
+                    I am currently working at PricewaterhouseCoopers (PWC) Argentina and occasionally take on freelance projects. I love learning every day.
                 </Text>
             </Box>
         </Box>

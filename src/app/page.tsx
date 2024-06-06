@@ -30,7 +30,7 @@ export default function Home() {
       <Box
         bg="gray.200"
         h="100vh"
-        backgroundImage="/monterey.jpg"
+        backgroundImage="/sonoma.jpg"
         backgroundSize="cover"
       >
         <TopBar />
@@ -146,47 +146,6 @@ export default function Home() {
               </Button>
 
             </GridItem>
-
-            <GridItem
-              rowSpan={2}
-              colSpan={1}
-            >
-              <Button
-                bg="rgba(255, 255, 255, 0)"
-                padding={10}
-                color="white"
-                display={"flex"}
-                justifyContent={"center"}
-                alignItems={"center"}
-                flexDirection={"column"}
-                _hover={{
-                  background: "rgba(255, 255, 255, 0.699)",
-                  color: "black",
-                  borderRadius: "10px"
-                }}
-                onClick={() => {
-                  window.open("https://twitter.com/ThedraxxWorld", "_blank")
-                }}
-              >
-                <Image
-                  src="/Twitter-X.png"
-                  alt="Picture of the author"
-                  width={55}
-                  height={55}
-                />
-
-                <Text
-                  marginTop={2}
-                  justifyContent={"center"}
-                  alignItems={"center"}
-                  fontSize={12}
-                  textAlign={"center"}
-                >
-                  x
-                </Text>
-              </Button>
-            </GridItem>
-
 
             <GridItem
               rowSpan={2}

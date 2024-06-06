@@ -32,11 +32,11 @@ const ShowFolder = () => {
                     xl: "40%",
                 }}
                 height={{
-                    base: "70%",
-                    sm: "65%",
-                    md: "60%",
-                    lg: "60%",
-                    xl: "45%",
+                    base: "80%",
+                    sm: "75%",
+                    md: "70%",
+                    lg: "70%",
+                    xl: "55%",
                 }}
                 transition="all ease-in-out"
                 borderRadius="10px"
@@ -131,11 +131,8 @@ const ShowFolder = () => {
                             className="chackraText card "
                             style={{
                                 color: "white",
-
                                 fontWeight: "bold",
-                                marginTop: "0.5rem",
-                                marginLeft: "0.5rem",
-                                marginRight: "0.5rem",
+                                marginTop: "0.2rem",
                                 justifyContent: "center",
                                 alignItems: "center",
                                 textAlign: "center",

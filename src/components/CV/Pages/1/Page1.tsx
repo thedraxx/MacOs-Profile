@@ -4,6 +4,10 @@ import { Box, Link, Text } from '@chakra-ui/react';
 import { SiFirebase, SiTypescript } from 'react-icons/si'
 import { FaNodeJs, FaReact } from 'react-icons/fa'
 import { SiPostgresql } from 'react-icons/si'
+import { FaPython } from 'react-icons/fa';
+import { SiCsharp } from 'react-icons/si';
+import { SiMysql } from 'react-icons/si';
+import { SiNextcloud } from 'react-icons/si';
 import { ChangeColorContext } from '@/components/context/ChangeColor';
 
 export const Page1 = () => {
@@ -84,10 +88,27 @@ export const Page1 = () => {
                     </Link>
 
                     <Link
+                        href="https://www.mysql.com/"
+                    >
+
+                        <SiMysql
+                            title='SQL'
+                            style={{
+                                marginLeft: "10px",
+                                marginRight: "10px",
+                                marginTop: "10px",
+                                color: "white",
+                                fontSize: "70px",
+                                cursor: "pointer"
+                            }}
+                        />
+                    </Link>
+
+                    <Link
                         href="https://www.postgresql.org/"
                     >
 
-                        <SiPostgresql
+                        <FaPython
                             title='PostgreSQL'
                             style={{
                                 marginLeft: "10px",
@@ -102,10 +123,10 @@ export const Page1 = () => {
 
                     <Link
 
-                        href={"mailto:frankdevarg@gmail.com?subject=Subject&body=Body%20goes%20here"}
+                        href={"https://dotnet.microsoft.com/es-es/"}
                     >
-                        <SiFirebase
-                            title='Firebase'
+                        <SiCsharp
+                            title='Microsoft .NET'
                             style={{
                                 marginLeft: "10px",
                                 marginRight: "10px",
@@ -119,7 +140,7 @@ export const Page1 = () => {
 
                     <Link
 
-                        href={"mailto:frankdevarg@gmail.com?subject=Subject&body=Body%20goes%20here"}
+                        href={"https://nodejs.org/en"}
                     >
                         <FaNodeJs
                             title='Node.js'

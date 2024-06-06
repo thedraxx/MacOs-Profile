@@ -78,22 +78,7 @@ export const FinalPage = () => {
                         />
                     </Link>
 
-                    <Link
-                        href="https://twitter.com/ThedraxxWorld"
-                    >
 
-                        <AiFillTwitterCircle
-                            title='x / twitter'
-                            style={{
-                                marginLeft: "10px",
-                                marginRight: "10px",
-                                marginTop: "10px",
-                                color: "white",
-                                fontSize: "50px",
-                                cursor: "pointer"
-                            }}
-                        />
-                    </Link>
 
                     <Link
                         href={"mailto:frankdevarg@gmail.com?subject=Subject&body=Body%20goes%20here"}

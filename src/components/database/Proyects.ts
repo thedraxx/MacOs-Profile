@@ -1,7 +1,4 @@
-export const Proyects =  [{
-    name: "¿Cuanto me sale?",
-    url: "https://myanimelist-web.netlify.app/"
-  },
+export const Proyects =  [
   {
     name: "MercadoLibre UI",
     url: "https://clon-mercadolibre-ui.vercel.app/"
@@ -11,7 +8,7 @@ export const Proyects =  [{
     url: "https://wordle-clon.netlify.app/"
   },
   {
-    name: "Tinder League of Legends",
+    name: "Cards LoL",
     url: "https://cards-lol.vercel.app/"
   },
 

@@ -40,9 +40,11 @@ export const Page2 = () => {
                     marginRight="20px"
                     textColor={"white"}
                 >
-                    I started working on frontend in 2020, with jQuery and vanilla Javascript, I had started my university studies during those times in the meanwhile doing landings or small applications,
+                    I started working on frontend in 2020, with vanilla Javascript, I had started my university studies during those times in the meanwhile doing landings or small applications,
                     you can see the whole timeline in my {
                         <Link
+                            fontSize={"xl"}
+                            color={"white"}
                             href="https://www.linkedin.com/in/iscodev/"
                         >
                             LinkedIn
