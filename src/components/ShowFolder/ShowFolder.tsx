@@ -82,7 +82,6 @@ const ShowFolder = () => {
                                 height: "1rem",
                                 textDecoration: "none",
                                 cursor: "pointer"
-
                             }}
                         >
                         </p>

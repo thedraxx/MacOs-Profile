@@ -52,23 +52,13 @@ export const Page1 = () => {
                 flexDirection="column"
             >
 
-                <Box justifyContent="center" alignItems="center" display="flex" flexDirection="row">
-                    <Link
-                        href="https://www.typescriptlang.org/"
-                    >
-                        <SiTypescript
-                            title='Typescript'
-                            style={{
-                                marginLeft: "10px",
-                                marginRight: "10px",
-                                marginTop: "10px",
-                                color: "white",
-                                fontSize: "50px",
-                                cursor: "pointer"
-                            }}
-                        />
+                <Box
+                    justifyContent="center"
+                    alignItems="center"
+                    display="flex"
+                    flexDirection="row"
+                >
 
-                    </Link>
 
                     <Link
                         href="https://es.react.dev/"

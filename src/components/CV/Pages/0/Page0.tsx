@@ -74,8 +74,8 @@ export const Page0 = () => {
                 src="/autor.jpg"
                 alt="Picture of the author"
                 width={{
-                    base: "70%",
-                    sm: "40%",
+                    base: "50%",
+                    sm: "30%",
                     md: "30%",
                     lg: "30%",
                     xl: "20%",
