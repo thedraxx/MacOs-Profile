@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { Box, Text, Link } from '@chakra-ui/react';
 import { AiFillLinkedin, AiFillTwitterCircle, AiFillGithub, AiOutlineMail, } from 'react-icons/ai';
 import { ChangeColorContext } from '@/components/context/ChangeColor';
+import { FaMastodon } from 'react-icons/fa';
 
 export const FinalPage = () => {
     const { colorActive } = useContext(ChangeColorContext)
@@ -79,6 +80,23 @@ export const FinalPage = () => {
                     </Link>
 
 
+                    <Link
+                        rel="me"
+                        href="https://techhub.social/@Thedraxx"
+                    >
+
+                        <FaMastodon
+                            title='Mastodon'
+                            style={{
+                                marginLeft: "10px",
+                                marginRight: "10px",
+                                marginTop: "10px",
+                                color: "white",
+                                fontSize: "50px",
+                                cursor: "pointer"
+                            }}
+                        />
+                    </Link>
 
                     <Link
                         href={"mailto:frankdevarg@gmail.com?subject=Subject&body=Body%20goes%20here"}
