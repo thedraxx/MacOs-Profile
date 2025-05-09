@@ -1,27 +1,27 @@
-export const Proyects =  [
+export const Proyects = [
   {
     name: "MercadoLibre UI",
-    url: "https://clon-mercadolibre-ui.vercel.app/"
+    url: "https://github.com/thedraxx/e-commerce-MercadoLibre"
   },
   {
-    name: "Wordle Clon",
-    url: "https://wordle-clon.netlify.app/"
+    name: "Wordle",
+    url: "https://github.com/thedraxx/WordleClon"
   },
   {
-    name: "Cards LoL",
-    url: "https://cards-lol.vercel.app/"
+    name: "Tinder LOL",
+    url: "https://github.com/thedraxx/tinder-lol-challenge"
   },
 
   {
-    name: "Crypto App",
+    name: "CryptoApp",
     url: "https://github.com/thedraxx/CryptoApp"
   },
   {
-    name: "Rappi App",
-    url: "https://github.com/thedraxx/Rappi-Challenge-ReactNative/tree/main"
+    name: "RappiApp",
+    url: "https://github.com/thedraxx/Rappi-Challenge-ReactNative"
   },
   {
-    name: "Weather App",
+    name: "WeatherApp",
     url: "https://github.com/thedraxx/Weather-App"
   }
-  ]
+]

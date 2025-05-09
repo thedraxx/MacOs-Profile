@@ -4,7 +4,7 @@ import Draggable from 'react-draggable';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ShowFolderContext } from '../context/ShowFolder';
-
+import { ExternalLink } from "lucide-react";
 const ShowFolder = () => {
 
     const { infoFolder, toggleShowFolder, proyects } = useContext(ShowFolderContext);
@@ -150,75 +150,82 @@ const ShowFolder = () => {
                         alignItems="center"
                     />
                 </Box>
+
                 <Box
                     display="flex"
-                    flexDirection={"row"}
+                    flexDirection="row"
                     justifyContent="center"
                     alignItems="center"
                     marginTop={1}
-                    w={"95%"}
+                    w="95%"
                 >
-                    {
-                        proyects.length > 0 ?
-                            <>
-                                {
-                                    <Box p={2}>
-                                        <Grid
-                                            templateColumns={columnSize}  // Define las columnas del grid según el tamaño de la pantalla
-                                            templateRows={rowSize}        // Define las filas del grid según el tamaño de la pantalla
-                                            gap={4}                       // Define el espacio entre las celdas
-                                            justifyContent="center"       // Define la alineación horizontal de las celdas
-                                            alignItems="center"           // Define la alineación vertical de las celdas
-                                            w={"100%"}
-                                            h={"100%"}
-                                            marginTop={5}
+                    {proyects.length > 0 ? (
+                        <Box p={2}>
+                            <Grid
+                                templateColumns={columnSize}
+                                templateRows={rowSize}
+                                gap={4}
+                                justifyContent="center"
+                                alignItems="center"
+                                w="100%"
+                                h="100%"
+                                marginTop={5}
+                            >
+                                {proyects.map((proyect, index) => (
+                                    <GridItem
+                                        key={index}
+                                        rowSpan={1}
+                                        colSpan={1}
+                                        borderRadius="10px"
+                                        display="flex"
+                                        padding={2}
+                                        justifyContent="center"
+                                        alignItems="center"
+                                        h="100%" // <-- Agregá esto para forzar que use la altura del grid
+                                    >
+                                        <a
+                                            href={proyect.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            style={{ textDecoration: "none" }}
                                         >
-                                            {proyects.map((proyect, index) => (
-                                                <GridItem
-                                                    key={index}
-                                                    rowSpan={1}
-                                                    colSpan={1}
-                                                    borderRadius="10px"
+                                            <Box
+                                                cursor="pointer"
+                                                display="flex"
+                                                flexDirection="column"
+                                                justifyContent="center"
+                                                alignItems="center"
+                                            >
+                                                <Image
+                                                    src="/firefox.png"
+                                                    alt="Project image"
+                                                    width={70}
+                                                    height={70}
+                                                />
+                                                <Text
+                                                    marginTop={2}
+                                                    fontSize={{
+                                                        base: "0.7rem",
+                                                        sm: "0.7rem",
+                                                        md: "0.8rem",
+                                                    }}
+                                                    textAlign="center"
                                                     display="flex"
-                                                    padding={2}
-                                                    justifyContent="center"
                                                     alignItems="center"
+                                                    gap="0.25rem"
                                                 >
-                                                    <Link href={proyect.url}>
-                                                        <Box
-                                                            display="flex"
-                                                            flexDirection={"column"}
-                                                            justifyContent="center"
-                                                            alignItems="center"
-                                                        >
-                                                            <Image
-                                                                src="/firefox.png"
-                                                                alt="Picture of the author"
-                                                                width={70}
-                                                                height={70}
-                                                            />
-                                                            <Text
-                                                                marginTop={2}
-                                                                fontSize={{
-                                                                    base: "0.7rem",
-                                                                    sm: "0.7rem",
-                                                                    md: "0.8rem",
-                                                                }}
-                                                                textAlign={"center"}
-                                                            >
-                                                                {proyect.name}
-                                                            </Text>
-                                                        </Box>
-                                                    </Link>
-                                                </GridItem>
-                                            ))}
-                                        </Grid>
-                                    </Box>
-                                }
-                            </>
-                            :
-                            infoFolder.description
-                    }
+                                                    {proyect.name}
+                                                    <ExternalLink size={12} />
+                                                </Text>
+                                            </Box>
+                                        </a>
+                                    </GridItem>
+                                ))}
+                            </Grid>
+                        </Box>
+                    ) : (
+                        infoFolder.description
+                    )}
                 </Box>
             </Box>
         </Draggable >
