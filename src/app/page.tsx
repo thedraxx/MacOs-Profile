@@ -61,7 +61,7 @@ export default function Home() {
               lg: "repeat(5, 1fr)",
               xl: "repeat(5, 1fr)",
             }}
-            gap={2}
+            gap={{ base: 6, md: 2 }}
             marginTop={5}
             marginBottom={5}
           >
@@ -100,7 +100,7 @@ export default function Home() {
                     fontSize={12}
                     textAlign={"center"}
                   >
-                    My CV
+                    About
                   </Text>
                 </Button>
               </GridItem>
@@ -182,7 +182,7 @@ export default function Home() {
                   fontSize={12}
                   textAlign={"center"}
                 >
-                  About this
+                  Warning
                 </Text>
               </Button>
             </GridItem>
