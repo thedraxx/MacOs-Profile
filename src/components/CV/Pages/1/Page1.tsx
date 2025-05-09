@@ -1,7 +1,7 @@
 'use client'
 import React, { useContext } from 'react';
 import { Box, Link, Text } from '@chakra-ui/react';
-import { SiFirebase, SiTypescript } from 'react-icons/si'
+import { SiFirebase, SiMicrosoftsqlserver, SiTypescript } from 'react-icons/si'
 import { FaNodeJs, FaReact } from 'react-icons/fa'
 import { SiPostgresql } from 'react-icons/si'
 import { FaPython } from 'react-icons/fa';
@@ -36,7 +36,7 @@ export const Page1 = () => {
                 textColor="white"
                 marginBottom={5}
             >
-                Currently I'm working as a FullStack Developer with these technologies:
+                I am currently working as a backend developer, though I also have hands-on experience with frontend technologies.
             </Text>
             <Box
                 w={{
@@ -77,12 +77,13 @@ export const Page1 = () => {
                         />
                     </Link>
 
+
                     <Link
-                        href="https://www.mysql.com/"
+                        href="https://learn.microsoft.com/en-us/ssms/download-sql-server-management-studio-ssms"
                     >
 
-                        <SiMysql
-                            title='SQL'
+                        <SiMicrosoftsqlserver
+                            title='SQL Server'
                             style={{
                                 marginLeft: "10px",
                                 marginRight: "10px",

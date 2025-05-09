@@ -40,11 +40,13 @@ export const Page2 = () => {
                     marginRight="20px"
                     textColor={"white"}
                 >
-                    I started working on frontend in 2020, with vanilla Javascript, I had started my university studies during those times in the meanwhile doing landings or small applications,
-                    you can see the whole timeline in my {
+                    I began working on frontend development in 2020 using vanilla JavaScript. At the same time, I had just started my university studies. During that period, I built landing pages and small applications.
+                    You can view the full timeline in my... {
                         <Link
                             fontSize={"xl"}
                             color={"white"}
+                            textDecoration={"underline"}
+
                             href="https://www.linkedin.com/in/iscodev/"
                         >
                             LinkedIn

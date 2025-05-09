@@ -38,8 +38,7 @@ export const Page3 = () => {
                     marginRight="20px"
                     textColor={"black"}
                 >
-                    I am currently working at PricewaterhouseCoopers (PWC) Argentina and occasionally take on freelance projects. I love learning every day.
-                </Text>
+                    I am currently working at PricewaterhouseCoopers (PwC) Argentina and occasionally take on freelance projects. I'm passionate about continuous learning and enjoy expanding my skills every day.                </Text>
             </Box>
         </Box>
     )

@@ -66,9 +66,8 @@ const ShowFolder = () => {
                         marginLeft={1}
                     >
 
-                        <p
+                        <div
                             onClick={() => { toggleShowFolder("", "") }}
-                            className="chackraText card "
                             style={{
                                 color: "white",
                                 fontSize: "1.5rem",
@@ -83,8 +82,8 @@ const ShowFolder = () => {
                                 textDecoration: "none",
                                 cursor: "pointer"
                             }}
-                        >
-                        </p>
+                            aria-label="Cerrar carpeta"
+                        />
                         <p
                             className="chackraText card "
                             style={{
