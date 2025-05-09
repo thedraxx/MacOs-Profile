@@ -14,7 +14,7 @@ const ShowFolder = () => {
     const rowSize = useBreakpointValue({ base: "1fr", sm: "1fr", md: "1fr" });
 
     return (
-        <Draggable>
+        <Draggable handle=".drag-handle">
             <Box
                 bg="#2D3748"
                 color="white"
@@ -41,11 +41,11 @@ const ShowFolder = () => {
                 transition="all ease-in-out"
                 borderRadius="10px"
                 boxShadow="0px 0px 10px 0px rgba(0, 0, 0, 0.75)"
-                transform={
-                    "translate(0px, 0px)"
-                }
+                transform={"translate(0px, 0px)"}
             >
+                {/* 🔥 ÁREA DE DRAG */}
                 <Box
+                    className="drag-handle" // ← esto es clave para limitar el arrastre
                     display="flex"
                     position={"absolute"}
                     flexDirection={"row"}
@@ -65,7 +65,6 @@ const ShowFolder = () => {
                         marginTop={1}
                         marginLeft={1}
                     >
-
                         <div
                             onClick={() => { toggleShowFolder("", "") }}
                             onTouchStart={() => { toggleShowFolder("", "") }}
@@ -99,8 +98,7 @@ const ShowFolder = () => {
                                 width: "1rem",
                                 height: "1rem",
                             }}
-                        >
-                        </p>
+                        />
                         <p
                             className="chackraText card "
                             style={{
@@ -115,8 +113,7 @@ const ShowFolder = () => {
                                 width: "1rem",
                                 height: "1rem",
                             }}
-                        >
-                        </p>
+                        />
                     </Stack>
 
                     <Box
@@ -136,11 +133,8 @@ const ShowFolder = () => {
                                 alignItems: "center",
                                 textAlign: "center",
                             }}
-
                         >
-                            {
-                                infoFolder.title
-                            }
+                            {infoFolder.title}
                         </Text>
                     </Box>
                     <Box
@@ -151,6 +145,7 @@ const ShowFolder = () => {
                     />
                 </Box>
 
+                {/* 💼 Contenido no draggable */}
                 <Box
                     display="flex"
                     flexDirection="row"
@@ -181,7 +176,7 @@ const ShowFolder = () => {
                                         padding={2}
                                         justifyContent="center"
                                         alignItems="center"
-                                        h="100%" // <-- Agregá esto para forzar que use la altura del grid
+                                        h="100%"
                                     >
                                         <a
                                             href={proyect.url}
@@ -228,7 +223,8 @@ const ShowFolder = () => {
                     )}
                 </Box>
             </Box>
-        </Draggable >
+        </Draggable>
+
 
     )
 }
