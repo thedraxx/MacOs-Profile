@@ -68,6 +68,7 @@ const ShowFolder = () => {
 
                         <div
                             onClick={() => { toggleShowFolder("", "") }}
+                            onTouchStart={() => { toggleShowFolder("", "") }}
                             style={{
                                 color: "white",
                                 fontSize: "1.5rem",

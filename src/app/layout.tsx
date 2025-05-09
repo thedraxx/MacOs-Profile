@@ -1,13 +1,10 @@
 
 import './globals.css'
 import Provider from './cv/providers/Provider';
-
+import "./favicon.ico";
 export const metadata = {
-  title: 'MacOs Portfolio',
-  description: 'This is a portfolio made with NextJS and ChakraUI',
-  icons: {
-    icon: '/favicon.ico',
-  },
+  title: 'macOS-Inspired Portfolio',
+  description: 'A sleek and modern portfolio built with Next.js and Chakra UI, inspired by the macOS aesthetic.',
 }
 
 export default function RootLayout({
